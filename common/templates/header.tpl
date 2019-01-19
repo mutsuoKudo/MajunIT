@@ -19,8 +19,8 @@
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
     <link rel="dns-prefetch" href="//platform.twitter.com">
     <!-- build:css /common/css/style.min.css -->
-    <link rel="stylesheet" href="/common/css/reset.css">
-    <link rel="stylesheet" href="/common/css/all.css">
+    <link rel="stylesheet" href="/MajunIT/common/css/reset.css">
+    <link rel="stylesheet" href="/MajunIT/common/css/all.css">
     <!-- endbuild -->
 
 <script>
