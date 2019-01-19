@@ -206,8 +206,8 @@ include_once("common/templates/header.tpl");
                         </div>
                         <input type="submit" class="search" value="検索">
                     </div>
+                    </form>
                 </div>
-                </form>
             </div>
             <div class="list-title">
                 <img src="/common/images/main/new.png" alt="New 新着案件">
