@@ -2,10 +2,6 @@
     Options +MultiViews
 </Files>
 #<IfModule mod_rewrite.c>
-#RewriteEngine on
-#RewriteBase /
-#RewriteRule ^$ MajunIT/ [L]
-#RewriteRule ^(.+)$ MajunIT/$1 [L]
 #</IfModule>
 #AddHandler x-httpd-php559 .php
 #suPHP_ConfigPath /usr/home/aa221k0x22/html/cgi-bin/
