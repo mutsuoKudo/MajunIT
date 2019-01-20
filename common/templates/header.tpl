@@ -41,7 +41,7 @@
         <h1>ITエンジニア、SEの方たち専門のマッチングサイトです。　技術者の方、初心者の方、どなたでもお気軽にご相談下さい！！</h1>
         <div class="inner">
             <ul>
-                <li><a href=""><img src="common/images/hdrftr/home_off.png" alt="ホーム"></a></li>
+                <li><a href="index.php"><img src="common/images/hdrftr/home_off.png" alt="ホーム"></a></li>
                 <li><a href="search.php?recommended=1"><img src="common/images/hdrftr/osusume_off.png" alt="オススメ案件"></a></li>
                 <li><a href="policy.php"><img src="common/images/hdrftr/policy_off.png" alt="サイトポリシー"></a></li>
                 <li><a href="cp.php"><img src="common/images/hdrftr/corporation_off.png" alt="会社概要"></a></li>
