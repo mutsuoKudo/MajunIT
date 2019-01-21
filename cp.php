@@ -11,34 +11,34 @@ include_once("common/templates/header.tpl");
                 <table class="cp">
                     <tr>
                         <th>社名</th>
-                        <td>株式会社 ＢＲＩＤＧＥ</td>
+                        <td>シーサーＮｅｔ　株式会社</td>
                     </tr>
                     <tr>
                         <th>設立年月日</th>
-                        <td>2008年4月</td>
+                        <td>2012年11月</td>
                     </tr>
                     <tr>
                         <th>本社</th>
-                        <td>東京都中央区銀座 7-17-2<br>
-                            アーク銀座ビルディング 6 階 <a href="http://goo.gl/vdj4G4" target="_blank" rel="nofollow">【Map】</a>
+                        <td>沖縄県那覇市高良3-8-23<br>
+                            眞浩商事ビル　４階 <a href="http://goo.gl/vdj4G4" target="_blank" rel="nofollow">【Map】</a>
                         </td>
                     </tr>
                     <tr>
                         <th>代表取締役</th>
-                        <td>熊谷 典久</td>
+                        <td>種田 貴彌</td>
                     </tr>
                     <tr>
                         <th>資本金</th>
-                        <td>33,000,000円</td>
+                        <td>15,000,000円</td>
                     </tr>
                     <tr>
                         <th>事業内容</th>
-                        <td>IT ソリューションサービス<br>
-                            Web ソリューションサービス<br>
-                            BPO サービス・ヘルプデスク<br>
-                            教育ビジネス<br>
-                            人材派遣サービス<br>
-                            （特定派遣番号 特 13-317196）
+                        <td>コーポレートサイト制作<br>
+                            名刺やロゴ制作<br>
+                            インフラ構築(ＷｅｂサーバーやＤＢ等)<br>
+                            オープンシステム開発<br>
+                            講師派遣(Ｊａｖａ，ＰＨＰ，Ａｎｄｒｏｉｄ，Ｏｆｆｉｃｅ系)<br>
+                            プログラミング講座
                         </td>
                     </tr>
                 </table>
