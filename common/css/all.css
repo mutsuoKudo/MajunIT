@@ -57,7 +57,7 @@ body {
   #header .title {
     position: relative;
     height: 289px;
-    background: url("../images/hdrftr/header2.png") no-repeat; }
+    background: url("../images/hdrftr/header3.png") no-repeat; }
     #header .title .logo {
       position: absolute;
       right: 25px;
@@ -585,24 +585,26 @@ body {
   bottom: 0;
   width: 100%;
   height: 103px;
-  background: #036eb7;
-  border-top: 2px solid #f68028; }
+  background: #ddd;
+  border-top: 2px solid #036eb7; }
   #footer .logo {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    top: 14px;
+    top: 11px;
     left: 25px;
-    width: 149px;
-    height: 26px;
-    background: url("../images/hdrftr/footer_logo.png") no-repeat; }
+    width: 144px;
+    height: 85px;
+    background: url("../images/hdrftr/footer_logo2.png") no-repeat;
+    background-size: 70%;
+   }
   #footer p {
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
     text-align: center;
-    color: #fff;
+    color: black;
     margin-top: 10px; }
   #footer ul {
     margin: 20px  auto 0;
@@ -616,7 +618,7 @@ body {
       #footer ul li:first-child {
         border-left: none; }
       #footer ul li a {
-        color: #fff;
+        color: black;
         text-decoration: none; }
         #footer ul li a:hover {
           text-decoration: underline; }

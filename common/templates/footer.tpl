@@ -48,7 +48,7 @@
 <!--/contents-->
 <div id="footer">
     <div class="inner">
-        <div class="logo">株式会社BRIDGE</div>
+        <div class="logo">シーサーNet株式会社</div>
     </div>
     <ul>
         <li><a href="/">ホーム</a></li><!--
