@@ -106,7 +106,7 @@ if(isset($_POST['mode']) and $_POST['mode'] == "edit") $i_chk = "false";
                                 <input type="file" name="image">
                             </div>
                             <div class="clearfix"></div>
-                            <h5>リンク先　※エンラボ内の場合（例）PHP、医療　/search.php?lang[]=PHP&type[]=医療</h5>
+                            <h5>リンク先　※MajunIT内の場合（例）PHP、医療　/search.php?lang[]=PHP&type[]=医療</h5>
                             <div class="col-md-12 txt">
                                 <input type="text" id="link" name="link" class="form-control mt10" value="<?php if(isset($dt['link']))echo $dt['link']?>" placeholder="リンク先">
                             </div>
