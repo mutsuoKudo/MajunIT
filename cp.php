@@ -11,7 +11,7 @@ include_once("common/templates/header.tpl");
                 <table class="cp">
                     <tr>
                         <th>社名</th>
-                        <td>シーサーＮｅｔ　株式会社</td>
+                        <td>シーサーＮｅｔ 株式会社</td>
                     </tr>
                     <tr>
                         <th>設立年月日</th>
@@ -20,7 +20,7 @@ include_once("common/templates/header.tpl");
                     <tr>
                         <th>本社</th>
                         <td>沖縄県那覇市高良3-8-23<br>
-                            眞浩商事ビル　４階 <a href="http://goo.gl/vdj4G4" target="_blank" rel="nofollow">【Map】</a>
+                            眞浩商事ビル　４階 <a href="https://goo.gl/maps/rxNqr41CAFx" target="_blank" rel="nofollow">【Map】</a>
                         </td>
                     </tr>
                     <tr>
@@ -35,9 +35,9 @@ include_once("common/templates/header.tpl");
                         <th>事業内容</th>
                         <td>コーポレートサイト制作<br>
                             名刺やロゴ制作<br>
-                            インフラ構築(ＷｅｂサーバーやＤＢ等)<br>
+                            インフラ構築(WebサーバーやDB等)<br>
                             オープンシステム開発<br>
-                            講師派遣(Ｊａｖａ，ＰＨＰ，Ａｎｄｒｏｉｄ，Ｏｆｆｉｃｅ系)<br>
+                            講師派遣(Java,PHP,Android,Office系)<br>
                             プログラミング講座
                         </td>
                     </tr>
