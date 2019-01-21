@@ -56,7 +56,7 @@
                 --><li><a href="/policy.php">サイトポリシー</a></li><!--
                 --><li><a href="/cp.php">会社概要</a></li>
     </ul>
-    <p>Copyright© 2015 BRIDGE Co. All Rights Reserved.</p>
+    <p>Copyright© 2019　シーサーNet株式会社 Co. All Rights Reserved.</p>
 </div>
 <!--/footer-->
 </div>
