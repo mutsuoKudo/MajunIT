@@ -49,7 +49,7 @@
             </ul>
         </div>
         <div class="title">
-            <p class="logo"><img src="common/images/hdrftr/logo.png" alt="エンジニアラボ"><a href="/search.php?recommended=1"><img src="common/images/hdrftr/pw_off.png" alt="オススメ案件"></a></p>
+            <p class="logo"><img src="common/images/hdrftr/logo3.png" alt="MajunIT"><a href="/search.php?recommended=1"><img src="common/images/hdrftr/button2.png" alt="オススメ案件"></a></p>
             <p class="tp1"><img src="common/images/hdrftr/tip.gif" alt="登録情報毎日更新！！"></p>
         </div>
     </div>
