@@ -84,7 +84,7 @@
     $('.liveMap').attr('href', urlLive);
 </script>
 <?php }?>
-<script src="common/jscommon.js"></script>
+<script src="common/js/common.js"></script>
 <!-- endbuild -->
 </body>
 </html>
