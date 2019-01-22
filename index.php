@@ -242,7 +242,7 @@ include_once("common/templates/header.tpl");
                         <?php }else{echo $seg?>
                         <?php }?>
                     </th>
-                    <td class="first"><a href="/detail/<?php echo $id?>"><?php echo $title?></a></td>
+                    <td class="first"><a href="detail.php/<?php echo $id?>"><?php echo $title?></a></td>
                     <td><?php echo $area?></td>
                     <td><?php echo $price?></td>
                 </tr>
