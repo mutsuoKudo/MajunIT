@@ -100,9 +100,9 @@ if(empty($list[0])) {
     if (isset($_GET['type'])) $_SESSION['type'] = $_GET['type']; else $_SESSION['type'] = "";
     if (isset($_GET['other'])) $_SESSION['other'] = $_GET['other']; else $_SESSION['other'] = "";
     if (isset($_GET['other2'])) $_SESSION['other2'] = $_GET['other2']; else $_SESSION['other2'] = "";
-    $link = "/?t=1";
+    $link = "index.php?t=1";
 }else{
-    $link = "/";
+    $link = "index.php";
 }
 
 include_once("common/templates/header.tpl");
@@ -152,7 +152,7 @@ include_once("common/templates/header.tpl");
                         <?php }else{echo $seg?>
                         <?php }?>
                     </th>
-                    <td class="first"><a href="/detail/<?php echo $id?>"><?php echo $title?></a></td>
+                    <td class="first"><a href="detail.php/<?php echo $id?>"><?php echo $title?></a></td>
                     <td><?php echo $area?></td>
                     <td><?php echo $price?></td>
                 </tr>

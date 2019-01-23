@@ -56,7 +56,7 @@ $bn = $db->get_all("SELECT id, title, link FROM banner WHERE post = '1' AND ".$s
                     if(!empty($img_chk))
                             $img = "/src/".$d['id'];
                         else
-                            $img = "common/images/noimage.jpg";
+                            $img = "../common/images/noimage2.jpg"
                     ?>
                     <img src="<?php echo $img?>" alt="<?php echo $d['comment']?>">
                     <p><?php echo $d['comment']?></p>
@@ -112,7 +112,7 @@ $bn = $db->get_all("SELECT id, title, link FROM banner WHERE post = '1' AND ".$s
             </div>
             <div class="detail-bot mt20">
                 <div class="list-title">
-                    <img alt="New 新着案件" src="common/images/main/anken.png">
+                    <img alt="New 新着案件" src="../common/images/main/anken.png">
                 </div>
                 <div class="detail-table">
                     <table>
@@ -142,9 +142,9 @@ $bn = $db->get_all("SELECT id, title, link FROM banner WHERE post = '1' AND ".$s
                             if (preg_match('/^(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/', $d['map'])) {
                                 echo '<iframe src="'.$d["map"].'" width="290" height="200"></iframe>';
                             ?>
-                            <p><img src="common/images/main/arrow.gif" alt="->">
+                            <p><img src="../common/images/main/arrow.gif" alt="->">
                                 <a href="<?php echo nl2br($d['map'])?>" target="_blank" rel="nofollow">地図を拡大して表示</a>
-                                <img src="common/images/main/link.gif" alt="リンクを開く">
+                                <img src="../common/images/main/link.gif" alt="リンクを開く">
                             </p>
                             <?php }else{?>
                             <a class="liveMap" target="_blank" href="#"><img id="staticMap" src="" alt="" /></a>

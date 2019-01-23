@@ -154,7 +154,7 @@ $(function () {
         if(iz == undefined) cnt = 1;
         if(cnt) {
             $.ajax({
-                url: '/common/api.php',
+                url: '../common/api.php',
                 method: 'post',
                 data: formData,
                 processData: false,
