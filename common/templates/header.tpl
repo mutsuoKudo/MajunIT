@@ -21,6 +21,8 @@
     <!-- build:css common/css/style.min.css -->
     <link rel="stylesheet" href="/MajunIT/common/css/reset.css">
     <link rel="stylesheet" href="/MajunIT/common/css/all.css">
+
+    <link rel="shortcut icon" href="/MajunIT/common/images/hdrftr/favicon2.ico">
     <!-- endbuild -->
 
 <script>
