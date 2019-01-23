@@ -81,18 +81,18 @@ $(function () {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //画像ホバー
     $('a img,form :image,.pagetop img').hover(function(){
-        $(this).attr('src', $(this).attr('src').replace('_off', '_on'));
+        $(this).attr('src', $(this).attr('src').replace('_off2', '_on2'));
     }, function(){
         if (!$(this).hasClass('active')) {
-            $(this).attr('src', $(this).attr('src').replace('_on', '_off'));
+            $(this).attr('src', $(this).attr('src').replace('_on2', '_off2'));
         }
     }).each(function(){
-        if(String($(this).attr("src")).match(/_off\.(.*)$/)){
+        if(String($(this).attr("src")).match(/_off2\.(.*)$/)){
             var img = new Image();
-            img.src = String($(this).attr("src")).replace(/_off\.(.*)$/,"_on.$1");
-        }else if(String($(this).attr("src")).match(/_on\.(.*)$/)){
+            img.src = String($(this).attr("src")).replace(/_off2\.(.*)$/,"_on2.$1");
+        }else if(String($(this).attr("src")).match(/_on2\.(.*)$/)){
             var img = new Image();
-            img.src = String($(this).attr("src")).replace(/_on\.(.*)$/,"_off.$1");
+            img.src = String($(this).attr("src")).replace(/_on2\.(.*)$/,"_off2.$1");
         }
     });
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
