@@ -98,7 +98,7 @@ if(isset($_POST['mode']) and $_POST['mode'] == "edit") $i_chk = "false";
                             <div class="col-md-12 txt">
                                  <span class="preview text-center">
                                         <?php
-                                        if($img) echo '<img src="/src/'.$dt['id'].'">
+                                        if($img) echo '<img src="/MajunIT/src/'.$dt['id'].'">
                                     <div data-target="#myModal" data-toggle="modal" class="btn btn-outline btn-danger btn-xs mt10">画像削除</div>';
                                         else echo "Preview";
                                         ?>

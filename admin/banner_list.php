@@ -39,7 +39,7 @@ $sl = $db->get_select();
                 ?>
                 <tr>
                     <td class="text-center"><a href="banner.php?id=<?php echo $list[$i]['id']?>"><div class="btn btn-primary" type="button">編集</div></a></td>
-                    <td><img src="/src/<?php echo $list[$i]['id']?>" width="100" alt="<?php echo $title?>"></td>
+                    <td><img src="/MajunIT/src/<?php echo $list[$i]['id']?>" width="100" alt="<?php echo $title?>"></td>
                     <td class=""><?php echo $title?></td>
                     <td class="text-center"><?php echo $id?></td>
                 </tr>
