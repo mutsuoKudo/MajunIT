@@ -11,7 +11,7 @@
             $blank = "";
             if($trg) $blank =  'target="_blank" rel="nofollow"';
             if($link)
-            echo '<a href="'.$link.'"'.$blank.'><img src="/src/'.$id.'" alt="'.$title.'"></a>';
+            echo '<a href="'.$link.'"'.$blank.'><img src="/MajunIT/src/'.$id.'" alt="'.$title.'"></a>';
             else
             echo '<img src="/MajunIT/src/'.$id.'" alt="'.$title.'">';
          }
@@ -25,9 +25,9 @@
         $blank = "";
         if ($trg) $blank = 'target="_blank" rel="nofollow"';
         if($link)
-        echo '<a href="' . $link . '"' . $blank . '><img src="/src/' . $id . '" alt="' . $title . '"></a>';
+        echo '<a href="' . $link . '"' . $blank . '><img src="/MajunIT/src/' . $id . '" alt="' . $title . '"></a>';
         else
-        echo '<img src="/src/' . $id . '" alt="' . $title . '">';
+        echo '<img src="/MajunIT/src/' . $id . '" alt="' . $title . '">';
         }
     }
     ?>
