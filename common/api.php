@@ -2,9 +2,11 @@
 function send_mail(){
 //-----------------------------------------------------------------------------------------------------//
 //差出人
-    $sender				=	"info@it-enlabo.com";
+    //$sender				=	"info@it-enlabo.com";
+    $sender				=	"kanan.takahashi@hokusys.jp"; 
 //管理者メールアドレス
-    $user_mail		=	"info@it-enlabo.com";
+    //$user_mail		=	"info@it-enlabo.com";
+    $user_mail		=	"kanan.takahashi@hokusys.jp";
 //管理者追加,で区切り
     $user_mail_add	=	"";
 
