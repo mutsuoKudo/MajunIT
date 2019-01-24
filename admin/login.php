@@ -63,6 +63,8 @@ if (isset($_POST["login"])) {
     <link href="css/timeline.css" rel="stylesheet">
     <link href="css/sb-admin-2.css" rel="stylesheet">
     <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="/MajunIT/common/images/hdrftr/favicon2.ico">
 </head>
 <body>
 <div class="container">

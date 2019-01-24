@@ -17,6 +17,8 @@ include (dirname(__FILE__) . "/../gl_logincheck.php");
     <link href="libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
     <!-- DataTables Responsive CSS -->
     <link href="libs/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/MajunIT/common/images/hdrftr/favicon2.ico">
 </head>
 <body>
 <div id="wrapper">

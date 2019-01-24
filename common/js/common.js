@@ -160,7 +160,7 @@ $(function () {
                 processData: false,
                 contentType: false
             }).done(function (res) {
-
+alert(res);
                 if (res == "error") {
                   alert("正しいメールアドレスを入力してください")
                 }else if (res == "ext_error") {
