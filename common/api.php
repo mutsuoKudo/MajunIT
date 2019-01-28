@@ -2,9 +2,9 @@
 function send_mail(){
 //-----------------------------------------------------------------------------------------------------//
 //差出人
-    $sender				=	"contact@shisa-net.com";
+    $sender				=	"info@majunit.com";
 //管理者メールアドレス
-    $user_mail		=	"contact@shisa-net.com";
+    $user_mail		=	"info@majunit.com";
 //管理者追加,で区切り
     $user_mail_add	=	"";
 
