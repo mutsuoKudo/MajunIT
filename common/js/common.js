@@ -160,7 +160,6 @@ $(function () {
                 processData: false,
                 contentType: false
             }).done(function (res) {
-alert(res);
                 if (res == "error") {
                   alert("正しいメールアドレスを入力してください")
                 }else if (res == "ext_error") {
@@ -169,7 +168,7 @@ alert(res);
                     alert("エントリーを受け付けました。ご応募ありがとうございました");
                     $.cookie("EL-ID", null, {expires: -1, path: '/'});
                     $.cookie("EL-TITLE", null, {expires: -1, path: '/'});
-                    window.location.href = '/';
+                    window.location.href = '/MajunIT/index.php';
                 } else {
                     alert("エラー：登録が完了できません");
                 }
