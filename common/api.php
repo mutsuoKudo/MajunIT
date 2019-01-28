@@ -2,16 +2,16 @@
 function send_mail(){
 //-----------------------------------------------------------------------------------------------------//
 //差出人
-    $sender				=	"info@it-enlabo.com";
+    $sender				=	"contact@shisa-net.com";
 //管理者メールアドレス
-    $user_mail		=	"info@it-enlabo.com";
+    $user_mail		=	"contact@shisa-net.com";
 //管理者追加,で区切り
     $user_mail_add	=	"";
 
 //管理者メールタイトル
-    $title				=	"【登録がありました】エンジニアラボ";
+    $title				=	"【登録がありました】MajunIT";
 //登録者宛メールタイトル
-    $user_title		=	"【エンジニア登録完了】エンジニアラボ";
+    $user_title		=	"【エンジニア登録完了】MajunIT";
 //管理者メールテンプレート先
     $template			=	"mail.tpl";
 //クライアント用テンプレート先
