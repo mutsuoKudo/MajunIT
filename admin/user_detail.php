@@ -73,7 +73,7 @@ $memo = $list['memo'];
                                 <th><?php echo $entry[$i]?></th>
                                 <td colspan="3">
                                     <?php if($entry_title[$i]){?>
-                                    <a href="/detail/<?php echo $entry[$i]?>" target="_blank"><?php echo $entry_title[$i]?></a>
+                                    <a href="/MajunIT/detail.php/<?php echo $entry[$i]?>" target="_blank"><?php echo $entry_title[$i]?></a>
                                     <?php }else{?>
                                         完全削除
                                     <?php }?>
