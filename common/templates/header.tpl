@@ -6,13 +6,13 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <![endif]-->
-    <meta name="Keywords" content="エンジニア, IT,求人,エンジニアラボ,フリーランスエンジニア" />
+    <meta name="Keywords" content="エンジニア, IT,求人,MajunIT,フリーランスエンジニア" />
     <meta name="description" content="エンジニア(SE)の求人情報、フリーランスエンジニア向けの求人案件情報など、お住まいの地域が地方の方にも合った案件、スキル相談から面接の相談まで、徹底的なサポートをお任せください！">
-    <meta property="og:title" content="エンジニア(SE)のIT求人案件情報なら【エンジニア・ラボ】～フリーランスエンジニアも大歓迎！" />
+    <meta property="og:title" content="エンジニア(SE)のIT求人案件情報なら【MajunIT】～フリーランスエンジニアも大歓迎！" />
     <?php if(isset($index)){ ?><meta property="og:type" content="website" /><?php }else{ ?><meta property="og:type" content="article" /><?php } ?>
     
-    <meta property="og:site_name" content="エンジニア(SE)のIT求人案件情報なら【エンジニア・ラボ】～フリーランスエンジニアも大歓迎！">
-    <title>エンジニア(SE)のIT求人案件情報なら【エンジニア・ラボ】～フリーランスエンジニアも大歓迎！</title>
+    <meta property="og:site_name" content="エンジニア(SE)のIT求人案件情報なら【MajunIT】～フリーランスエンジニアも大歓迎！">
+    <title>エンジニア(SE)のIT求人案件情報なら【MajunIT】～フリーランスエンジニアも大歓迎！</title>
     <link rel="dns-prefetch" href="//maps.google.com/maps/api/js?sensor=false">
     <link rel="dns-prefetch" href="//www.google.com/jsapi">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
