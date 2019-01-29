@@ -90,6 +90,8 @@ class Password
     {
         switch ($this->mode) {
             case self::MODE_INTERNAL:
+                    var_dump("password_hash");
+                    var_dump(password_hash($password, PASSWORD_DEFAULT, array('cost' => $this->cost)));
                 return password_verify($password, $hash);
                 break;
             case self::MODE_HIGH:
