@@ -14,9 +14,9 @@ $id = 0;
 if(isset($_GET['id'])) $id = $_GET['id'];
 $list = $db->get_all("SELECT * FROM users WHERE id = '".$id."'")[0];
 //全案件取得
-$entry = "";
-$rt = "";
-$entry_title = "";
+$entry = array();
+$rt = array();
+$entry_title = array();
 $cnt = 0;
 $email = $list['email'];
 $entry_no = $db->get_all("SELECT id FROM entry WHERE email ='".$email."'");
