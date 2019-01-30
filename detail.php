@@ -54,7 +54,7 @@ $bn = $db->get_all("SELECT id, title, link FROM banner WHERE post = '1' AND ".$s
                     $img_chk = $db->get_all("SELECT id FROM images WHERE id = '".$d['id']."'");
                     if(isset($img_chk[0]))$img_chk = $img_chk[0]['id'];
                     if(!empty($img_chk))
-                            $img = "/src/".$d['id'];
+                            $img = "/MajunIt/src/".$d['id'];
                         else
                             $img = "../common/images/noimage2.jpg"
                     ?>
