@@ -69,8 +69,8 @@ if (isset($_FILES['upfile']['error']) && is_int($_FILES['upfile']['error'])) {
                 }
                 if (count($row) !== 16) {
                     // カラム数が異なる無効なフォーマット                   
-                throw new RuntimeException(count($row));
-                    // throw new RuntimeException('カラム数が異なる無効なフォーマットです');
+                //throw new RuntimeException(count($row));
+                    throw new RuntimeException('カラム数が異なる無効なフォーマットです');
                 }
                 $row[0] = deleteBom(deleteBom($row[0]));
 
