@@ -17,19 +17,27 @@ if(isset($_GET['edit'])){
 $msg = "";
 if(isset($_POST['mode'])){
     if($_POST['mode'] == "reg"){
-        $sql = "SELECT no FROM `select` WHERE text = '".$_POST['txt']."'";
-        $chk = $db->get_all($sql);
-        if(isset($chk[0]['no'])){
+                if(empty($_POST['txt'])){
             $msg =  '<div class="alert alert-danger alert-dismissable">
-                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-                               既に登録されているマスタです。
-                            </div>';
-        }else {
-            $sql = "INSERT INTO `select` (`type` ,`text` ,`show`)
-                VALUES (
-                '" . $_POST['type'] . "', '" . htmlspecialchars($_POST['txt']) . "', '0'
-                );";
-            $db->get_all($sql);
+            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+           未入力は登録できません。
+        </div>';
+
+        }else{
+            $sql = "SELECT no FROM `select` WHERE text = '".$_POST['txt']."'";
+            $chk = $db->get_all($sql);
+            if(isset($chk[0]['no'])){
+                $msg =  '<div class="alert alert-danger alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                   既に登録されているマスタです。
+                                </div>';
+            }else {
+                $sql = "INSERT INTO `select` (`type` ,`text` ,`show`)
+                    VALUES (
+                    '" . $_POST['type'] . "', '" . htmlspecialchars($_POST['txt']) . "', '0'
+                    );";
+                $db->get_all($sql);
+            }
         }
     }elseif($_POST['mode'] == "delete" ){
         $sql ="DELETE FROM `select` WHERE `no` = '".$_POST['id']."'";
@@ -60,7 +68,7 @@ $ta = "";
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <?php if(!empty($msg))echo $msg?>
+            <?php if(!empty($msg))echo $msg ?>
             <h1 class="page-header">マスタ管理 - <?php echo $title[$mode]?></h1>
         </div>
         <div class="col-lg-12">
