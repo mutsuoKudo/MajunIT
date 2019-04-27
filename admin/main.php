@@ -17,6 +17,8 @@ function deleteBom($str)
     return $str;
 }
 ?>
+
+
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -143,10 +145,10 @@ function deleteBom($str)
                                 }
                             }
                             echo '
-                                        <label class="checkbox-inline">
-                                        <input type="checkbox" name="lang[]" value="'.$set_type.'"'.$chk.'>'.$set_type.'
-                                    </label>
-                                    ';
+                            <label class="checkbox-inline">
+                            <input type="checkbox" name="lang[]" value="'.$set_type.'"'.$chk.'>'.$set_type.'
+                            </label>
+                            ';
                         }
                         ?>
                     </div>
@@ -181,8 +183,8 @@ function deleteBom($str)
         $listcnt = count($list);
         for($i=0;$i<$listcnt;++$i){
             $id = $list[$i]['id'];
-           // $id = deleteBom($id);
-
+            // $id = deleteBom($id);
+            
             $post = $list[$i]['post'];
             $title = $list[$i]['title'];
             $lang = $list[$i]['lang'];
