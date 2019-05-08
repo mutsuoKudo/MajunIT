@@ -51,14 +51,22 @@ $bn = $db->get_all("SELECT id, title, link FROM banner WHERE post = '1' AND ".$s
                 <div class="clearfix mt20">
                 <div class="detail-top-left">
                     <?php
-                    $img_chk = $db->get_all("SELECT id FROM images WHERE id = '".$d['id']."'");
+                    $img_chk = $db->get_all("SELECT * FROM images WHERE id = '".$d['id']."'");
                     if(isset($img_chk[0]))$img_chk = $img_chk[0]['id'];
+                    // ↓takahashi add
+                    $target = $d["id"];
+                    
                     if(!empty($img_chk))
-                            $img = "/MajunIt/src/".$d['id'];
+                            // $img = "/MajunIt/src/".$d['id'];
+                            // ↓takahashi add
+                            echo ("<img src='../import_media.php?target=$target'>");
                         else
-                            $img = "../common/images/noimage2.jpg"
+                            // $img = "../common/images/noimage2.jpg"
+                            // ↓takahashi add
+                            echo ("<img src='../common/images/noimage2.jpg'>");
                     ?>
-                    <img src="<?php echo $img?>" alt="<?php echo $d['comment']?>">
+                    <!-- <img src="<?php echo $img?>" alt="<?php echo $d['comment']?>"> -->
+
                     <p><?php echo $d['comment']?></p>
                 </div>
                 <div class="detail-top-right">

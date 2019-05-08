@@ -1,0 +1,791 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html xmlns:s="http://sqlfairy.sourceforge.net/sqlfairy.xml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta charset="utf-8">
+<title>テーブル定義</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+					table.htable {
+						margin: 3em auto 1em auto !important;
+					}
+					table.htable th {
+						border-left: 10px solid #e5e5e5 !important;
+					}
+					footer {
+						border-top: 1px solid #e5e5e5;
+						padding: 0.5em;
+					}
+				</style>
+</head>
+<body>
+<div class="container">
+<h1 class="page-header">テーブル定義</h1>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>admin</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>no</td>
+<td>int(10)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>id</td>
+<td>varchar(12)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>pw</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>latest</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>anken</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>id</td>
+<td>char(255)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>post</td>
+<td>int(1)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>title</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>types</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td></td>
+<td>area</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td></td>
+<td>seg</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td></td>
+<td>other</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td></td>
+<td>other2</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td></td>
+<td>price</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td></td>
+<td>lang</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td></td>
+<td>job</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td></td>
+<td>eligible</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td></td>
+<td>addr</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">14</td>
+<td></td>
+<td>salary</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">15</td>
+<td></td>
+<td>comment</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">16</td>
+<td></td>
+<td>works</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">17</td>
+<td></td>
+<td>map</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">18</td>
+<td></td>
+<td>station</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">19</td>
+<td></td>
+<td>edituser</td>
+<td>varchar(20)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">20</td>
+<td></td>
+<td>timer</td>
+<td>varchar(10)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">21</td>
+<td></td>
+<td>del</td>
+<td>int(11)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">22</td>
+<td></td>
+<td>latest</td>
+<td>varchar(19)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>banner</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>id</td>
+<td>char(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>post</td>
+<td>int(1)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>title</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>types</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td></td>
+<td>area</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td></td>
+<td>seg</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td></td>
+<td>other</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td></td>
+<td>other2</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td></td>
+<td>price</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td></td>
+<td>lang</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td></td>
+<td>link</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td></td>
+<td>edituser</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td></td>
+<td>latest</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>entry</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>no</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>id</td>
+<td>char(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>email</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>latest</td>
+<td>varchar(19)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td></td>
+<td>flag</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>images</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>no</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>id</td>
+<td>char(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>image</td>
+<td>mediumblob</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>mine</td>
+<td>varchar(64)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>select</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>no</td>
+<td>int(11)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>type</td>
+<td>char(6)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>text</td>
+<td>text</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>show</td>
+<td>int(2)</td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered htable"><tbody>
+<tr class="active">
+<th>テーブル名</th>
+<td></td>
+</tr>
+<tr class="active">
+<th>スキーマ</th>
+<td>users</td>
+</tr>
+</tbody></table>
+<table class="table table-condensed">
+<thead><tr>
+<th class="text-right">#</th>
+<th>論理名</th>
+<th>物理名</th>
+<th>型</th>
+<th>NULL</th>
+<th>デフォルト値</th>
+<th>主キー</th>
+<th>ユニーク</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td></td>
+<td>id</td>
+<td>int(7)</td>
+<td></td>
+<td></td>
+<td><span class="glyphicon glyphicon-ok"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td></td>
+<td>type</td>
+<td>int(1)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td></td>
+<td>email</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td></td>
+<td>file</td>
+<td>longblob</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td></td>
+<td>mine</td>
+<td>varchar(10)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td></td>
+<td>latest</td>
+<td>varchar(19)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td></td>
+<td>memo</td>
+<td>text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer class="text-center">
+					your company
+				</footer>
+</body>
+</html>
+
