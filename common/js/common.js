@@ -144,7 +144,11 @@ $(function () {
         }
     });
 
-
+   //クリック確認
+//    $('.entry2').on('click', function() {
+//               alert("クリックしたよ")      
+//         });
+    
     //フォームAJAX
     $('#entry,.entry2').on('click', function() {
         var trg = $(this).parent().parent()[0];
@@ -172,7 +176,7 @@ $(function () {
                 } else {
                     alert("エラー：登録が完了できません");
                 }
-                //console.log(res);
+                // console.log(res);
             });
         }else{
             alert("案件を選択してください。")
