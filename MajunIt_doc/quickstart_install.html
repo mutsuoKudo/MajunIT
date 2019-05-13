@@ -90,7 +90,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="#">&nbsp;<span class="projectTitle"> MajunIT 開発ドキュメント</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="MajunIt_doc.html">&nbsp;<span class="projectTitle"> MajunIT 開発ドキュメント</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -255,8 +255,8 @@
     <li id="インストールの開始">インストールの開始</li>
         <ul>
             <li>ROOTパスワード→rootpass→完了→完了<br>rootpassは任意のもの</li>
-            <li>ユーザーの作成→user→userpass→このユーザーを管理者にするにチェック→完了→完了
-                <br>※userとuserpassは任意のもの</li>
+            <li>ユーザーの作成→hokusys→hokusyspass→このユーザーを管理者にするにチェック→完了→完了
+                <br>※hokusysとhokusyspassは任意のもの</li>
         </ul>
     <li>再起動</li>
     <ul>
@@ -295,7 +295,10 @@
         上で設定した中身になっているか確認 <br>
         （lessコマンドについては <a href="https://qiita.com/sion_cojp/items/04a2aa76a1021fe77079">https://qiita.com/sion_cojp/items/04a2aa76a1021fe77079</a> 参照）</li></ul>
     <li>DNSに対してpingしてみる</li>
-        <ul><li>ping 192.168.71.172</li></ul>
+        <ul>
+            <li>ping 192.168.71.172</li>
+            <li><a href=quickstart_install.html#SSHの確認>SSHの確認</a>へとぶ</li>
+        </ul>
 </ul>
 
 <h2>ipアドレスの固定（変更）：無線の場合</h2>
@@ -342,7 +345,7 @@
     </ul>
 </ul>
 
-<h2>SSHの確認 </h2>
+<h2 id="SSHの確認">SSHの確認 </h2>
 <p>（同一ネットワーク上の他の端末から行う：持ち込み端末の場合はipv4の設定をサーバーに合わせた設定にする）</p>
 
 <ul>
@@ -377,13 +380,136 @@
 
 <ul>
     <li>yum -y install vsftpd</li>
-    <li>自動起動設定</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>自動起動の設定</li>
+    <ul><li>systemctl enable vsftpd.service</li></ul>
+    <li>vi /etc/vsftdp/vsftpd/conf（エディタで修正）</li>
+    <ul>
+        <li>use_localtime=YES←追加</li>
+        <li>force_dot_files=YES←追加</li>
+    </ul>
+    <li>firewall設定</li>
+    <ul>
+        <li>firewall-cmd --add-service=ftp</li>
+        <li>firewall-cmd --runtime-to-permanent</li>
+    </ul>
+    <li>SELinux設定</li>
+    <ul><li>setsebool -P ftpd_fulol_access on</li></ul>
+    <li>ドキュメントルートをFTPユーザーの所有とする</li>
+    <ul><li>chown -R hokusys:hokusys /var/www/html <br>
+        （FTPユーザーは<a href="quickstart_install.html#インストールの開始">インストールの開始で作成したユーザーを使用</a><br>
+        ユーザーがない場合は作成する ）</li></ul>
+    <li>ユーザーを作る場合</li>
+    <ul>
+        <li>useradd ユーザー名</li>
+        <li>passwd　上記ユーザー名→パスワード×２回入力</li>
+        <li>cat /etc/passwd（確認）</li>
+        <li>ドキュメントルートをこのユーザーの所有とし、FTPでこのユーザーを使用する</li>
+    </ul>
 </ul>
+
+<h2>メールサーバーの導入</h2>
+
+<ul>
+    <li>yum -y install postfix</li>
+    <li>自動起動設定</li>
+    <ul><li>(systemctl enable postfix.service)</li></ul>
+    <li>firewall設定</li>
+    <ul>
+        <li>firewall-cmd --add-service=smtp</li>
+        <li>firewall-cmd --runtime-to-permanent</li>
+    </ul>
+</ul>
+
+<h2>PHP7.3アプリケーションサーバーの設定</h2>
+<ul>
+    <li>yum -y install epel-release</li>
+    <li>rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</li>
+    <li>yum remove php-*</li>
+    <li>yum -y install --enablerepo=remi,remi-php73 php</li>
+    <li>yum -y install --enablerepo=remi,remi-php73 php-mysqlnd php-intl <br>
+    php-mbstring php-pdo php-gd php-json</li>
+    <li>サーバー起動</li>
+    <ul>
+        <li>systemctl start httpd.service</li>
+        <li>systemstl start vsftpd.service</li>
+    </ul>
+</ul>
+
+<h2>windows側でFFFTPの接続設定を行う</h2>
+
+<ul>
+    <li>↓画像を参照に設定する　※ホスト名、ユーザー名、パスワードなどは設定したものを使用</li>
+    <img src="images/ffftp.png" alt="">
+    <li>MajunIT以下を　/var/www/html以下にコピーする <br>
+    （db_config.php、import_banner.php、admin/import_adminbanner.php、import_media.phpの <br>
+    4つのファイルの中身を調整：ホスト名、ユーザー名、パスワード ）</li>
+    <ul><li>細かいことをいうと、.gitフォルダや.gitignoreファイルはあるとおかしいのでサーバーから削除</li></ul>
+</ul>
+
+<h2>MariaDBの設定</h2>
+
+<ul>
+    <li>yum -y install mariadb mariadb-server</li>
+    <li>自動起動の設定</li>
+    <ul><li>systemctl enable mariadb-server</li></ul>
+    <li>MariaDB起動</li>
+    <ul><li>systemctl start mariadb.service</li></ul>
+
+    <li>firewallの設定</li>
+    <ul>
+        <li>firewall-cmd --add-service=mysql</li>
+        <li>firewall-cmd --runtime-to-permanent</li>
+    </ul>
+    <li>mysqladmin -u root password 'rootpass'</li>
+    <li>mysqladmin -p -u root -h localhost password 'rootpass'→rootpass</li>
+</ul>
+
+<h2>phpMyadminの設定</h2>
+
+<ul>
+    <li>yum -y install --enablerepo=remi-php73 phpMyadmin</li>
+    <li>vi /etc/httpd/conf.d/phpMyadmin.conf</li>
+    <ul>
+        <li>&lt;Directory /usr/share/phpMyAdmin&gt; タグと &lt;Directory /usr/share/phpMyAdmin/setup/&gt; タグで<br>
+             囲まれた範囲の&lt;RequireAny&gt; タグの中だけ2か所編集 <br>
+            ↓画像参照
+        </li>
+        <img src="images/phpMyadmin.png" alt="">
+    </ul>
+    <li>systemctl restart httpd</li>
+    <li>ネットワークに繋がっている端末のブラウザで、</li>
+    <ul>
+        <li>http://192.168.71.172/phpMyadmin</li>
+        <li>rootでログイン</li>
+        <li>majunitデータベース作成（照合順序：utf_general_ci）</li>
+        <li>MajunIT:MajunITPassでユーザー作成</li>
+        <ul>
+            <li>すべてのホスト</li>
+            <li>すべての特権</li>
+        </ul>
+        <li>majunitデータベースのインポート</li>
+    </ul>
+    <li>SELinuxで、httpd経由のネットワーク接続を有効にする</li>
+    <ul>
+        <li>setsebool -P httpd_can_network_connect 1</li>
+        <li>getsebool httpd_can_network_connect ←onになっているか確認</li>
+    </ul>
+</ul>
+
+<h2>稼働確認</h2>
+
+<ul>
+    <li><a href="http://192.168.1.188/MajunIT/index.php" shape="rect" target="_blank">
+        http://192.168.71.172/MajunIT/index.php</a></li>
+    <li><a href="http://192.168.1.188/MajunIT/admin/login.php" shape="rect" target="_blank">
+        http://192.168.71.172/MajunIT/admin/login.php</a></li>
+    <li><a href="http://192.168.1.188/MajunIT/MajunIt_doc/MajunIt_doc.html" shape="rect" target="_blank">
+        http://192.168.71.172/MajunIT/MajunIt_doc/MajunIt_doc.html</a></li>
+</ul>
+
+<h2>電源断</h2>
+
+<ul><li>poweroff (systemctl poweroff)</li></ul>
 <hr class="shaded"/>
 
 <footer>
