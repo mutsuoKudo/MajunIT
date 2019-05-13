@@ -36,4 +36,4 @@ include_once("common/templates/header.tpl");
                 TEL:098-987-4775（受付時間　平日9：00～18：00まで）
             </div>
         </div>
-<?php include_once("common/templates/footer.tpl") ?>
+<?php include_once("common/templates/footer2.tpl") ?>
