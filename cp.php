@@ -43,4 +43,4 @@ include_once("common/templates/header.tpl");
                     </tr>
                 </table>
         </div>
-<?php include_once("common/templates/footer.tpl") ?>
+<?php include_once("common/templates/footer2.tpl") ?>

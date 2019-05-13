@@ -162,7 +162,7 @@ table > thead:first-child > tr:first-child > td {
     border-top: 0;
 }
 table > tbody + tbody {
-    b
+    
 }
 table > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
@@ -228,7 +228,7 @@ ul#results-container a {
     background-color: transparent;
 }
 
-ul#results-container a: hover {
+ul#results-container a:hover {
     color: black;
 }
 

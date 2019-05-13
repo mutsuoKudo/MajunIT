@@ -11,9 +11,9 @@
             $blank = "";
             if($trg) $blank =  'target="_blank" rel="nofollow"';
             if($link)
-            echo '<a href="'.$link.'"'.$blank.'><img src="../import_banner.php?target='.$id.'" alt="'.$title.'"></a>';
+            echo '<a href="'.$link.'"'.$blank.'><img src="import_banner.php?target='.$id.'" alt="'.$title.'"></a>';
             else
-            echo '<img src="../import_banner.php?target='.$id.'" alt="'.$title.'">';
+            echo '<img src="import_banner.php?target='.$id.'" alt="'.$title.'">';
          }
 
     if(isset($bn)) {
@@ -25,9 +25,9 @@
         $blank = "";
         if ($trg) $blank = 'target="_blank" rel="nofollow"';
         if($link)
-        echo '<a href="' . $link . '"' . $blank . '><img src="../import_banner.php?target=' . $id . '" alt="' . $title . '"></a>';
+        echo '<a href="' . $link . '"' . $blank . '><img src="import_banner.php?target=' . $id . '" alt="' . $title . '"></a>';
         else
-        echo '<img src="../import_banner.php?target=' . $id . '" alt="' . $title . '">';
+        echo '<img src="import_banner.php?target=' . $id . '" alt="' . $title . '">';
         }
     }
     ?>
