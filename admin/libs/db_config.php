@@ -12,7 +12,7 @@
 //    define( 'DB_NAME', 'egm_enlabo' );
 
 // localserver
-    define( 'DB_HOST', 'mysql:dbname=majunit;host=localhost;charset=utf8' );
+    define( 'DB_HOST', 'mysql:dbname=majunit;host=192.168.71.171;charset=utf8' );
     define( 'DB_USER', 'MajunIT');
     define( 'DB_PASS', 'MajunITPass' );
 //    define( 'DB_NAME', 'e_job' );
