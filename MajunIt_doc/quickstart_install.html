@@ -321,13 +321,14 @@
     <li>NetworkManagerがwifiインターフェース（wlp2s0）を使用しているか確認</li>
     <ul><li> systemctl status NetworkManager.service(infoタグの後に(wlp2s0)：と表示されていればOK)</li></ul>
     <li> wifiアクセスポイントに接続するための接続情報の作成</li>
-    <ul><li>nmcil con add con-name wlp2s0 ifname wlp2s0 type wifi xxxxx <br>
-        (con-nameは接続名なので任意の名前。ifnameはデバイス名（nmcil dで調べた名前）上記のように同じでもよい)</li></ul>
+    <ul><li>nmcil con add con-name wlp2s0 ifname wlp2s0 type wifi ssid xxxxx <br>
+        (con-nameは接続名で任意の名前でよい。ifnameはデバイス名（nmcil dで調べた名前）上記のように同じでもよい。<br>
+        xxxxxはssidを入力 )</li></ul>
     <li>接続情報の確認</li>
     <ul><li> cat /etc/sysconfig/network-scripts/ifcfg-wlp2s0 (ESSID:xxxxx DEVICE:wlp2s0になっていればok)</li></ul>
     <li> 接続情報にセキュリティーモード、パスワード追加</li>
     <ul>
-        <li>nmcli con modify wlp2s0 wifi-sec,key-mgmt wpa-psk</li>
+        <li>nmcli con modify wlp2s0 wifi-sec.key-mgmt wpa-psk</li>
         <li> nmcli con modify wlp2s0 wifi-sec.psk WIFIpass (WIFIpassには使用しているwifiのパスワードを入力)</li>
     </ul>
     <li>接続確認</li>
@@ -408,6 +409,7 @@
 </ul>
 
 <h2>メールサーバーの導入</h2>
+<p>（現実にメールを送るにはインターネット上のドメインが必要：レンタルサーバー要）</p>
 
 <ul>
     <li>yum -y install postfix</li>
@@ -417,6 +419,10 @@
     <ul>
         <li>firewall-cmd --add-service=smtp</li>
         <li>firewall-cmd --runtime-to-permanent</li>
+    </ul>
+    <li>SELinuxの設定</li>
+    <ul>
+        <li>setsebool -P httpd_can_sendmail=1</li>
     </ul>
 </ul>
 

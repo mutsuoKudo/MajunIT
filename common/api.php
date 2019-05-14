@@ -13,25 +13,48 @@ function send_mail(){
 //登録者宛メールタイトル
     $user_title		=	"【エンジニア登録完了】MajunIT";
 //管理者メールテンプレート先
-    $template			=	"mail.tpl";
+//    $template			=	"mail.tpl";
 //クライアント用テンプレート先
-    $user_template	=	"mail_user.tpl";
+//    $user_template	=	"mail_user.tpl";
 
   // $user_mail = "test@eg-mode.com";
   // $user_mail_add = "";
 //-----------------------------------------------------------------------------------------------------//
     $entry = cookie_title();
-    require('libs/Smarty.class.php');
-    $smarty	 = new Smarty();
-    $smarty->template_dir = 'templates';
+//     require('libs/Smarty.class.php');
+    // $smarty	 = new Smarty();
+    // $smarty->template_dir = 'templates';
     $bcc            = "";
     if($user_mail_add) $bcc = $user_mail_add;
     $email          = $_POST['email'];
     $to				= $user_mail;
-    $smarty->assign('email', $email);
-    $smarty->assign('entry', $entry);
-    $body			= $smarty->fetch($template);
-    $body_user   	= $smarty->fetch($user_template);
+    // $smarty->assign('email', $email);
+    // $smarty->assign('entry', $entry);
+    // $body			= $smarty->fetch($template);
+    // $body_user   	= $smarty->fetch($user_template);
+    // 本文を設定1
+	$auto_reply_text1 = "メールアドレス:\n";
+	$auto_reply_text1 .= $email . "\n";
+	$auto_reply_text1 .= "\n\n";
+	$auto_reply_text1 .= "エントリー:\n";
+                  $auto_reply_text1 .= $entry . "\n";
+    
+    // 本文を設定2
+	$auto_reply_text2 = "この度はMajunITからのエントリーありがとうございました。\n";
+	$auto_reply_text2 .= "担当マネージャーよりご連絡させていただきます。\n\n";
+	$auto_reply_text2 .= "【ご登録内容】";
+	$auto_reply_text2 .= "メールアドレス:\n";
+	$auto_reply_text2 .= $email . "\n";
+	$auto_reply_text2 .= "\n\n";
+                  $auto_reply_text2 .= "エントリー:\n";
+                  $auto_reply_text2 .= $entry . "\n\n";
+                  $auto_reply_text2 .=  "----------------------------------------------\n\n";
+                  $auto_reply_text2 .=  "ITエンジニア、SEの方たち専門のマッチングサイト\n";
+                  $auto_reply_text2 .=  "http://majunit.com\n";
+
+    $body       = $auto_reply_text1;
+    $body_user  = $auto_reply_text2;
+    
     $res = sendmail($user_title,$email,$body_user,$to,$sender,0,0);
     $res2 = sendmail($title,$to,$body,$email,$sender,$bcc,"admin");
     echo $res+$res2;
@@ -190,13 +213,13 @@ function validate_email($email, $strict = true) {
 function sendmail($title,$to,$body,$from,$sender,$bcc,$admin){
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
-    $body = fSetLF($body);
+//    $body = fSetLF($body);
     $body = mb_convert_encoding($body, 'ISO-2022-JP-MS');
     $sender = mb_encode_mimeheader($sender);
     $header = "From:".$sender." <".$from.">\n"."Content-Type: text/plain; charset=\"ISO-2022-JP\";\n";
     if($admin)$header = "From:".$from."\n";
     if($bcc)$header .= "Bcc: ".$bcc."\n";
-    return mb_send_mail($to, $title, $body, $header);
+    return mb_send_mail($to, $title, $body, $header,$from);
 }
 function fSetLF($String){
     $String = str_replace("\r\n", "\n", $String);
