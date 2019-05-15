@@ -7,9 +7,11 @@
         header("Location: detail.php");
     }
     try {
-        $user = "MajunIT";
-        $pass = "MajunITPass";
-        $pdo = new PDO("mysql:dbname=majunit;host=192.168.71.171;charset=utf8", $user, $pass);
+        include_once('admin/libs/db_config.php');
+        // $user = "MajunIT";
+        // $pass = "MajunITPass";
+        // $pdo = new PDO("mysql:dbname=majunit;host=192.168.71.171;charset=utf8", $user, $pass);
+        $pdo =new PDO(DB_HOST, DB_USER, DB_PASS);
         $sql = "SELECT * FROM images WHERE id = :target;";
         $stmt = $pdo->prepare($sql);
         $stmt -> bindValue(":target", $target, PDO::PARAM_STR);

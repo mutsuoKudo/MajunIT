@@ -321,7 +321,7 @@
         <li> nmcli con modify wlp2s0 wifi-sec.psk WIFIpass (WIFIpassには使用しているwifiのパスワードを入力)</li>
     </ul>
     <li>接続確認</li>
-    <ul><li>nmcli con up wlp4s0</li></ul>
+    <ul><li>nmcli con up wlp2s0</li></ul>
     <li>ipアドレス固定（有線の場合）の<a href="quickstart_install.html#ipアドレスとサブネットマスク"> ipアドレス・サブネットマスクの変更</a>から
         <a href="quickstart_install.html#設定ファイル確認">設定ファイル確認</a><br>
         （less /etc/sysconfig/network-scripts/ifcfg-wlp2s0）までと同じようにipアドレスやDNSなどを設定する。</li>
@@ -436,8 +436,7 @@
     <li>↓画像を参照に設定する　※ホスト名、ユーザー名、パスワードなどは設定したものを使用</li>
     <img src="images/ffftp.png" alt="">
     <li>MajunIT以下を　/var/www/html以下にコピーする <br>
-    （db_config.php、import_banner.php、admin/import_adminbanner.php、import_media.phpの <br>
-    4つのファイルの中身を調整：ホスト名、ユーザー名、パスワード ）</li>
+    （db_config.phpの中身を調整：ホスト名、ユーザー名、パスワード ）</li>
     <ul><li>細かいことをいうと、.gitフォルダや.gitignoreファイルはあるとおかしいのでサーバーから削除</li></ul>
 </ul>
 
